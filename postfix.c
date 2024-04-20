@@ -190,15 +190,15 @@ void debug() {
     printf("\n");
 }
 
-void reset() {        // 모두 0으로 초기화 
-    infixExp[0] = '\0';
-    postfixExp[0] = '\0';
+void reset() {        // 스택 초기화
+    infixExp[0] = '\0';  // infixExp 초기화
+    postfixExp[0] = '\0';  // postfixExp 초기화
     for(int i = 0; i < MAX_STACK_SIZE; i++)
-		postfixStack[i] = '\0';
+        postfixStack[i] = '\0';  // postfixStack 초기화
          
-	postfixStackTop = -1;
-	evalStackTop = -1;
-	evalResult = 0;
+    postfixStackTop = -1;  // postfixStack의 최상위 인덱스 초기화
+    evalStackTop = -1;  // evalStack의 최상위 인덱스 초기화
+    evalResult = 0;  // 평가 결과 초기화
 }
 
 
